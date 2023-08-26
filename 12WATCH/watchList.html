@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>12WATCH</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+		<link href="css\watchListStyle.css" rel="stylesheet" />
+	</head>
+	<body onload="loadUserInfo(),getList('planned');">
+		<!-- top Navigation -->
+		<div w3-include-html="topNav.html"></div>
+		<script>
+			async function randomAnime() {
+				const animeData = await getAllAnimeInfo();
+				const num = Math.floor(Math.random() * animeData.length);
+				const selectedAnimeName = animeData[num].anime_name;
+
+				sessionStorage.setItem("selectedAnimeName", selectedAnimeName);
+
+				// Construct the target URL with the selectedAnimeName and navigate
+				const targetURL = `animeInfo.html`;
+				window.location.href = targetURL;
+			}
+		</script>
+
+		<!-- login and register form -->
+		<link rel="stylesheet" href="css\loginForm.css" />
+		<div class="form-overlay" id="form-overlay"></div>
+		<div class="popup" id="signIn">
+			<form>
+				<div class="popup-top">
+					<h2>Login</h2>
+					<a href="#" onclick="closePopup()"
+						><img src="images\Icon metro-cross.png" alt=""
+					/></a>
+				</div>
+
+				<p>Join us and share yours anime passions.</p>
+				<div class="input-con">
+					<div class="error">
+						<div class="input-item">
+							<img src="images\Icon material-person.png" alt="" />
+							<input type="text" placeholder="Username" id="signUsername" />
+						</div>
+						<p class="errorText" id="loginUsernameError"></p>
+					</div>
+
+					<div class="error">
+						<div class="input-item">
+							<img src="images\Icon awesome-lock.png" alt="" />
+							<input type="password" placeholder="Password" id="signPassword" />
+						</div>
+						<p class="errorText" id="loginPasswordError"></p>
+					</div>
+				</div>
+
+				<button type="submit" onclick="login(event)">Login</button>
+				<div class="link">
+					<p>Don't have an account?</p>
+					<h5 onclick="openRegister()">Register</h5>
+				</div>
+			</form>
+		</div>
+
+		<div class="popup" id="register">
+			<form id="register">
+				<div class="popup-top">
+					<h2>Register</h2>
+					<a href="#" onclick="closePopup()"
+						><img src="images\Icon metro-cross.png" alt=""
+					/></a>
+				</div>
+
+				<p>Join us and share yours anime passions.</p>
+
+				<div class="input-con">
+					<div class="error">
+						<div class="input-item">
+							<img src="images\Icon material-person.png" alt="" />
+							<input type="text" placeholder="Username" id="username" />
+						</div>
+						<p class="errorText" id="usernameError"></p>
+					</div>
+
+					<div class="error">
+						<div class="input-item">
+							<img src="images\Icon material-email.png" alt="" />
+							<input type="text" placeholder="Email" id="email" />
+						</div>
+						<p class="errorText" id="emailError"></p>
+					</div>
+
+					<div class="error">
+						<div class="input-item">
+							<img src="images\Icon awesome-lock.png" alt="" />
+							<input type="password" placeholder="Password" id="password" />
+						</div>
+						<p class="errorText" id="passwordError"></p>
+					</div>
+
+					<div class="error">
+						<div class="input-item">
+							<img src="images\Icon awesome-lock.png" alt="" />
+							<input
+								type="password"
+								placeholder="Confirm password"
+								id="confirmPassword"
+							/>
+						</div>
+						<p class="errorText" id="confirmPasswordError"></p>
+					</div>
+				</div>
+				<button type="submit" onclick="register(event)">Register</button>
+				<div class="link">
+					<p>Already have an account?</p>
+					<h5 onclick="openSignIn()">Login</h5>
+				</div>
+			</form>
+		</div>
+
+		<!-- content -->
+		<div class="background">
+			<img id="backgroundImage" src="images\banner.png" alt="" />
+		</div>
+
+		<div class="body">
+			<div class="content">
+				<div class="left">
+					<div class="pfp">
+						<img id="profileImage" src="images\pfp.png" alt="" />
+					</div>
+				</div>
+
+				<div class="right">
+					<h2 class="username" id="head-username"></h2>
+
+					<ul class="tabs">
+						<li>
+							<a href="#planned-tab" onclick="getList('planned')">Planned</a>
+						</li>
+						<li>
+							<a href="#watching-tab" onclick="getList('watching')">Watching</a>
+						</li>
+						<li>
+							<a href="#finished-tab" onclick="getList('finished')">Finished</a>
+						</li>
+						<li>
+							<a href="#dropped-tab" onclick="getList('dropped')">Dropped</a>
+						</li>
+						<li><a href="#loved-tab" onclick="getList('loved')">Loved</a></li>
+					</ul>
+
+					<div id="planned-tab" class="tab-content active">
+						<h5 class="header">Planned</h5>
+						<div class="hor" id="planned-animeCards"></div>
+					</div>
+
+					<div id="watching-tab" class="tab-content">
+						<h5 class="header">Watching</h5>
+						<div class="hor" id="watching-animeCards"></div>
+					</div>
+
+					<div id="finished-tab" class="tab-content">
+						<h5 class="header">Finished</h5>
+						<div class="hor" id="finished-animeCards"></div>
+					</div>
+
+					<div id="dropped-tab" class="tab-content">
+						<h5 class="header">Dropped</h5>
+						<div class="hor" id="dropped-animeCards"></div>
+					</div>
+
+					<div id="loved-tab" class="tab-content">
+						<h5 class="header">Loved</h5>
+						<div class="hor" id="loved-animeCards"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div w3-include-html="footer.html"></div>
+		</div>
+	</body>
+
+	<script src="js\ms1-user-info.js"></script>
+	<script src="js\ms2-anime-info.js"></script>
+	<script src="js\ms4-personal-list.js"></script>
+
+	<script src="js/w3.js"></script>
+	<script>
+		function initPage() {
+			setNavBar();
+		}
+		//to bring in other HTML on the fly into this page
+		w3.includeHTML(initPage);
+	</script>
+</html>

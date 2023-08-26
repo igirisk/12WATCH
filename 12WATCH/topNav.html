@@ -1,0 +1,80 @@
+<style>
+	.custom-navbar {
+		background: linear-gradient(to bottom, #000000, #00000019)!important;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+	}
+	body {
+		padding-top: 90px;
+	}
+	ul{
+		justify-content: center;
+		align-items: center;
+	}
+	.nav-link:hover {
+        cursor: pointer;
+    }
+	#dropdownMenuButton-profile img{
+		width: 50px;
+		height: 50px;
+		border-radius: 100px;
+		object-fit: cover;
+	}
+	#dropdownMenuButton-profile{
+		border: 0;
+		padding: 0;
+		background-color: transparent;
+	}
+	#dropdownMenuButton-profile::after {
+		display: none;
+	}
+	.dropdown-menu{
+		background-color: rgb(17, 17, 17);
+		border: 1px solid rgb(112, 112, 112);
+	}
+	.dropdown-menu img{
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
+		margin-bottom: 2px;
+	}
+	.dropdown-item{
+		background-color: rgb(17, 17, 17);
+		color: rgb(112, 112, 112) !important;
+		font-weight: 500;
+	}
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-light custom-navbar">
+	<a class="navbar-brand" href="index.html">
+		<img src="images\logo.png" alt="Logo" width="150" height="50" />
+	</a>
+
+	<button
+		class="navbar-toggler"
+		type="button"
+		data-toggle="collapse"
+		data-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent"
+		aria-expanded="false"
+		aria-label="Toggle navigation"
+	>
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav ml-auto">
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="search.html">Search</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"  onclick="randomAnime()">Random</a>
+			</li>
+			<li class="nav-item" id="navUser">
+				<a class="nav-link" href="#" onclick="openSignIn()">Login</a>
+			</li>
+		</ul>
+	</div>
+</nav>

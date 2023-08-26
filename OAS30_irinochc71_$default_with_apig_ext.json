@@ -1,0 +1,877 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "anime_review_api",
+    "version" : "2023-08-03 03:39:58UTC"
+  },
+  "servers" : [ {
+    "url" : "https://irinochc71.execute-api.us-east-1.amazonaws.com/{basePath}",
+    "variables" : {
+      "basePath" : {
+        "default" : ""
+      }
+    }
+  } ],
+  "paths" : {
+    "/anime_info/character" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /anime_info/character"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /anime_info/character"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/anime_info/genre" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /anime_info/genre"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /anime_info/genre"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/anime_info/producer" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /anime_info/producer"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /anime_info/producer"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/anime_info/staff" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /anime_info/staff"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /anime_info/staff"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/anime_info/studio" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /anime_info/studio"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /anime_info/studio"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/anime_info/trailer" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /anime_info/trailer"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /anime_info/trailer"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/anime_info/{anime_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /anime_info/{anime_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "put" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PUT /anime_info/{anime_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /anime_info/{anime_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "anime_name",
+        "in" : "path",
+        "description" : "Generated path parameter for anime_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/list" : {
+      "put" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PUT /list"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:personal_list_crud/invocations",
+          "connectionType" : "INTERNET",
+          "timeoutInMillis" : 30000
+        }
+      },
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /list"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:personal_list_crud/invocations",
+          "connectionType" : "INTERNET",
+          "timeoutInMillis" : 30000
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /list"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:personal_list_crud/invocations",
+          "connectionType" : "INTERNET",
+          "timeoutInMillis" : 30000
+        }
+      }
+    },
+    "/review" : {
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /review"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:reviews_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/user/delete" : {
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /user/delete"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:user_info_crud/invocations",
+          "connectionType" : "INTERNET",
+          "timeoutInMillis" : 30000
+        }
+      }
+    },
+    "/userImg/{username}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /userImg/{username}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:user-img-crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /userImg/{username}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:user-img-crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "username",
+        "in" : "path",
+        "description" : "Generated path parameter for username",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/anime_info" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /anime_info"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /anime_info"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/anime_info/card/{anime_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /anime_info/card/{anime_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "anime_name",
+        "in" : "path",
+        "description" : "Generated path parameter for anime_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/anime_info/character/{anime_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /anime_info/character/{anime_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "anime_name",
+        "in" : "path",
+        "description" : "Generated path parameter for anime_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/anime_info/genre/{anime_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /anime_info/genre/{anime_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "anime_name",
+        "in" : "path",
+        "description" : "Generated path parameter for anime_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/anime_info/producer/{anime_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /anime_info/producer/{anime_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "anime_name",
+        "in" : "path",
+        "description" : "Generated path parameter for anime_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/anime_info/staff/{anime_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /anime_info/staff/{anime_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "anime_name",
+        "in" : "path",
+        "description" : "Generated path parameter for anime_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/anime_info/studio/{anime_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /anime_info/studio/{anime_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "anime_name",
+        "in" : "path",
+        "description" : "Generated path parameter for anime_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/anime_info/trailer/{anime_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /anime_info/trailer/{anime_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "anime_name",
+        "in" : "path",
+        "description" : "Generated path parameter for anime_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/review/{anime_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /review/{anime_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:reviews_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "anime_name",
+        "in" : "path",
+        "description" : "Generated path parameter for anime_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/review/{anime_name}/{username}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /review/{anime_name}/{username}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:reviews_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "put" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PUT /review/{anime_name}/{username}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:reviews_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /review/{anime_name}/{username}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:reviews_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "anime_name",
+        "in" : "path",
+        "description" : "Generated path parameter for anime_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      }, {
+        "name" : "username",
+        "in" : "path",
+        "description" : "Generated path parameter for username",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/list/add" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /list/add"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:personal_list_crud/invocations",
+          "connectionType" : "INTERNET",
+          "timeoutInMillis" : 30000
+        }
+      }
+    },
+    "/user/login" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /user/login"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:user_info_crud/invocations",
+          "connectionType" : "INTERNET",
+          "timeoutInMillis" : 30000
+        }
+      }
+    },
+    "/user/register" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /user/register"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:user_info_crud/invocations",
+          "connectionType" : "INTERNET",
+          "timeoutInMillis" : 30000
+        }
+      }
+    },
+    "/userImg" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /userImg"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:user-img-crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/anime_info/character/{character_name}/{voice_actor}" : {
+      "put" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PUT /anime_info/character/{character_name}/{voice_actor}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "character_name",
+        "in" : "path",
+        "description" : "Generated path parameter for character_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      }, {
+        "name" : "voice_actor",
+        "in" : "path",
+        "description" : "Generated path parameter for voice_actor",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/anime_info/staff/{anime_name}/{staff_name}/{staff_role}" : {
+      "put" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PUT /anime_info/staff/{anime_name}/{staff_name}/{staff_role}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:anime_info_crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "anime_name",
+        "in" : "path",
+        "description" : "Generated path parameter for anime_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      }, {
+        "name" : "staff_name",
+        "in" : "path",
+        "description" : "Generated path parameter for staff_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      }, {
+        "name" : "staff_role",
+        "in" : "path",
+        "description" : "Generated path parameter for staff_role",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/user/update" : {
+      "put" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PUT /user/update"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:user_info_crud/invocations",
+          "connectionType" : "INTERNET",
+          "timeoutInMillis" : 30000
+        }
+      }
+    },
+    "/userImg/backgroundImg/{username}" : {
+      "put" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PUT /userImg/backgroundImg/{username}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:user-img-crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "username",
+        "in" : "path",
+        "description" : "Generated path parameter for username",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/userImg/profilePic/{username}" : {
+      "put" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PUT /userImg/profilePic/{username}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:725854187086:function:user-img-crud/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "username",
+        "in" : "path",
+        "description" : "Generated path parameter for username",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    }
+  },
+  "x-amazon-apigateway-cors" : {
+    "allowMethods" : [ "DELETE", "GET", "POST", "PUT" ],
+    "allowHeaders" : [ "content-type" ],
+    "exposeHeaders" : [ "content-type" ],
+    "maxAge" : 300,
+    "allowCredentials" : true,
+    "allowOrigins" : [ "http://*", "http://127.0.0.1:8080", "http://anime-reivew.s3-website-us-east-1.amazonaws.com", "https://*" ]
+  },
+  "x-amazon-apigateway-importexport-version" : "1.0"
+}

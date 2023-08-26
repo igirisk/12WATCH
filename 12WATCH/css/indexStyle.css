@@ -1,0 +1,200 @@
+body {
+	background-color: black;
+	padding: 0 !important;
+}
+h3 {
+	color: white;
+	margin-bottom: 20px;
+	font-weight: 900;
+}
+#carouselExampleIndicators {
+	position: top;
+}
+
+.carousel-item img {
+	width: 100%;
+	height: 500px;
+	opacity: 70%;
+}
+.carousel-indicators {
+	z-index: 1; /* Adjust this value as needed */
+}
+
+.sys {
+	color: rgb(191, 191, 191);
+	background-color: rgba(0, 0, 0, 0.345);
+}
+.cardmyRow {
+	display: flex;
+	overflow-y: hidden;
+}
+.cardmyRow::-webkit-scrollbar {
+	height: 6px;
+}
+.cardmyRow::-webkit-scrollbar-thumb {
+	background-color: rgb(255, 186, 201);
+	border-radius: 10px;
+	border: 1px solid rgb(253, 171, 189);
+}
+.cardmyRow::-webkit-scrollbar {
+	height: 8px;
+}
+.cardHori {
+	padding-inline: 20px;
+	margin-top: 80px;
+}
+
+.toAnime {
+	text-decoration: none !important;
+	color: transparent !important;
+}
+
+.myCard {
+	width: 460px;
+	margin: 0px;
+	padding: 0px;
+	margin-right: 30px;
+	margin-bottom: 10px;
+	display: flex;
+	background-color: rgb(17, 17, 17);
+	border-radius: 5px;
+}
+.thumbnail {
+	position: relative;
+}
+.thumbnail img {
+	height: 280px;
+	width: 100%;
+	min-height: 100%;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	min-height: fit-content;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	color: #fff;
+	border-bottom-left-radius: 5px;
+}
+
+.animeName {
+	font-size: 20px;
+	color: #fff;
+	font-weight: 600;
+}
+.studio {
+	font-size: 15px;
+	color: #e4e4e4;
+	font-weight: 200;
+	font-style: italic;
+	margin-top: auto;
+}
+
+.info {
+	width: 55%;
+	padding: 10px;
+	align-items: start;
+	max-height: 300px;
+}
+.myRow {
+	margin: auto;
+	padding: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.episode {
+	color: white;
+	font-weight: 600;
+	font-size: 18px;
+}
+.recommend {
+	display: inline-flex;
+}
+
+.recommend h5 {
+	display: inline-block;
+	margin-right: 5px;
+	color: rgb(39, 216, 0);
+	font-size: 18px;
+}
+
+.recommend img {
+	height: 18px;
+}
+
+.source {
+	color: white;
+	font-size: 12px;
+	font-style: italic;
+	margin-bottom: 5px;
+	padding: auto;
+}
+.rating {
+	display: flex;
+	align-items: center;
+	margin-bottom: 5px;
+	padding: auto;
+}
+
+.star-con {
+	width: 25px;
+	height: 25px;
+	margin-right: 5px;
+}
+.star-con img {
+	width: 100%;
+}
+.rating h6 {
+	color: #fff;
+	margin-left: 5px;
+	margin-top: 8px;
+}
+
+.sysnopsis {
+	color: rgb(191, 191, 191);
+	font-size: 12px;
+	height: 12em; /* Adjust the height as needed */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 10; /* Adjust the number of lines to limit */
+	-webkit-box-orient: vertical;
+	margin-bottom: 10px;
+}
+
+.genre {
+	display: flex;
+	align-items: center;
+	margin: auto;
+	padding: auto;
+	justify-content: space-between;
+}
+.chipContainer {
+	display: flex;
+}
+
+.chip {
+	color: #fff;
+	font-size: 10px;
+	border: 1px solid rgb(121, 121, 121);
+	border-radius: 10px;
+	margin: 0px;
+	margin-right: 5px;
+	padding-inline: 5px;
+	padding-top: 0px;
+}
+
+.imgList {
+	width: 20px;
+	margin: 0px;
+}
