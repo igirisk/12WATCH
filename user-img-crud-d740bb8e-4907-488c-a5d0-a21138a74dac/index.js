@@ -1,11 +1,11 @@
 const mysql = require("mysql");
 
 const con = mysql.createConnection({
-	host: "user-img.ce5brupzflao.us-east-1.rds.amazonaws.com",
-	user: "admin",
+	host: "use#######om",
+	user: "######",
 	password: "#######",
-	port: "3306",
-	database: "user_img",
+	port: "######",
+	database: "##",
 });
 
 exports.handler = (event, context, callback) => {
