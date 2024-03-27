@@ -157,7 +157,7 @@ CREATE TABLE `staffs` (
   `staff_image` longtext,
   PRIMARY KEY (`id`),
   KEY `anime_name2_idx` (`anime_name`),
-  CONSTRAINT `anime_name9` FOREIGN KEY (`anime_name`) REFERENCES `anime_info` (`anime_name`) ON UPDATE CASCADE
+  CONSTRAINT `anime_name0` FOREIGN KEY (`anime_name`) REFERENCES `anime_info` (`anime_name`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
