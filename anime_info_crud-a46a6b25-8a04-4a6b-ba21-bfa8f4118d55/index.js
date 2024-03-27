@@ -2,11 +2,11 @@
 const mysql = require("mysql");
 // Connect to anime_info schema
 const con = mysql.createConnection({
-	host: "anime-information.ce5brupzflao.us-east-1.rds.amazonaws.com",
-	user: "admin",
+	host: "##########",
+	user: "#############",
 	password: "######",
-	port: "3306",
-	database: "anime_info",
+	port: "##############",
+	database: "#############",
 });
 exports.handler = (event, context, callback) => {
 	let sql;
