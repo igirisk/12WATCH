@@ -211,7 +211,7 @@ async function getMyReview(anime_name, username) {
 	}
 }
 
-function addReview(event, all) {
+async function addReview(event, all) {
 	event.preventDefault();
 	let response = "";
 
@@ -220,20 +220,17 @@ function addReview(event, all) {
 	const spoilerCheckbox = document.getElementById(`spoilerCheckbox${all}`);
 
 	// Check which radio button is checked
+	let recommend;
 	if (recommendedRadio.checked) {
 		recommend = "yes";
 	} else if (notRecommendedRadio.checked) {
 		recommend = "no";
 	} else {
-		return alert("please select weather you recommend this anime or not");
+		return alert("Please select whether you recommend this anime or not.");
 	}
 
-	//check if there is spoiler
-	if (spoilerCheckbox.checked) {
-		spoiler = "yes";
-	} else {
-		spoiler = "no";
-	}
+	// Check if there is a spoiler
+	const spoiler = spoilerCheckbox.checked ? "yes" : "no";
 
 	let jsonData = new Object();
 	jsonData.anime_name = sessionStorage.getItem("selectedAnimeName");
@@ -254,10 +251,10 @@ function addReview(event, all) {
 		true
 	);
 	request.setRequestHeader("Content-Type", "application/json"); // Set the Content-Type header
-	request.onload = function () {
+	request.onload = async function () {
 		response = JSON.parse(request.responseText);
 		if (response.message == "Review written") {
-			updateAnimeStarRecommend();
+			await updateAnimeStarRecommend();
 			alert("Review posted successfully!");
 			location.reload();
 		} else {
@@ -267,7 +264,7 @@ function addReview(event, all) {
 	request.send(JSON.stringify(jsonData));
 }
 
-function editReview(event) {
+async function editReview(event) {
 	event.preventDefault();
 	let response = "";
 	let username = sessionStorage.getItem("username");
@@ -277,20 +274,17 @@ function editReview(event) {
 	const spoilerCheckbox = document.getElementById("spoilerCheckbox");
 
 	// Check which radio button is checked
+	let recommend;
 	if (recommendedRadio.checked) {
 		recommend = "yes";
 	} else if (notRecommendedRadio.checked) {
 		recommend = "no";
 	} else {
-		return alert("please select weather you recommend this anime or not");
+		return alert("Please select whether you recommend this anime or not.");
 	}
 
-	//check if there is spoiler
-	if (spoilerCheckbox.checked) {
-		spoiler = "yes";
-	} else {
-		spoiler = "no";
-	}
+	// Check if there is a spoiler
+	const spoiler = spoilerCheckbox.checked ? "yes" : "no";
 
 	let jsonData = new Object();
 	jsonData.recommend = recommend;
@@ -307,10 +301,10 @@ function editReview(event) {
 		true
 	);
 	request.setRequestHeader("Content-Type", "application/json"); // Set the Content-Type header
-	request.onload = function () {
+	request.onload = async function () {
 		response = JSON.parse(request.responseText);
-
 		if (response.message != "Internal Server Error") {
+			await updateAnimeStarRecommend();
 			alert("Review updated successfully.");
 			location.reload();
 		} else {
@@ -321,7 +315,7 @@ function editReview(event) {
 	request.send(JSON.stringify(jsonData));
 }
 
-function deleteReview() {
+async function deleteReview() {
 	let response = "";
 	let jsonData = new Object();
 	let username = sessionStorage.getItem("username");
@@ -332,9 +326,10 @@ function deleteReview() {
 	let request = new XMLHttpRequest();
 	request.open("DELETE", "http://localhost:3000/review", true);
 	request.setRequestHeader("Content-Type", "application/json"); // Set the Content-Type header
-	request.onload = function () {
+	request.onload = async function () {
 		response = JSON.parse(request.responseText);
 		if (response.message == "Review deleted") {
+			await updateAnimeStarRecommend();
 			alert("Review deleted successfully.");
 			location.reload();
 		} else {
